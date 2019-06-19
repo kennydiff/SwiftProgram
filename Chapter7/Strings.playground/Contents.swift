@@ -13,9 +13,9 @@ let playground = "Hello, playground"
 var mutablePlayground = "Hello, mutable playground"
 mutablePlayground += "!"
 //for c: Character in mutablePlayground.characters {  //旧版的写法。。。
-//for c: Character in mutablePlayground{  //#Kenny20190424# 这里，Swift5.0之后不需要再加characters了 ，直接就是Character的容器。
-//    print("'\(c)'")
-//}
+for c: Character in mutablePlayground{  //#Kenny20190424# 这里，Swift5.0之后不需要再加characters了 ，直接就是Character的容器。
+    print("'\(c)'")
+}
 
 let oneCoolDude = "\u{1F60E}"
 let aAcute = "\u{0061}\u{0301}"
@@ -25,7 +25,7 @@ let aAcute = "\u{0061}\u{0301}"
 //}
 
 let aAcutePrecomposed = "\u{00E1}"
-let b = (aAcute == aAcutePrecomposed) // 4.2的Swift会显示true，5.0 编译出错，需要强制给b定义类型，然后得到的是false
+let b = (aAcute == aAcutePrecomposed) // 会显示true
 
 //let aAcutePrecomposed = "\u{00E1}"
 //print(aAcute)
