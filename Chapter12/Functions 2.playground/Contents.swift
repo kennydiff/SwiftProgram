@@ -2,40 +2,29 @@
 
 import Cocoa
 
-//func printPersonalGreetings(to names: String...) {   // 这尼玛三个点字符串数组，，，的声明好骚啊...
-//    for name in names {
-//        print("Hello \(name), welcome to the playground.")
-//    }
-//}
-//printPersonalGreetings(to: "Alex","Chris","Drew","Pat")
-//
-//func printPersonalGreetings(bbb to: String) {
-//
-//        print("Hello \(to), welcome to the playground.")
-//
-//}
-//printPersonalGreetings(bbb: "Alex")
-
-
-//func divisionDescriptionFor(numerator: Double, denominator: Double, withPunctuation punctuation: String = ".") -> String {
-//    return "\(numerator) divided by \(denominator) equals \(numerator / denominator)\(punctuation)"
-//}
-//print(divisionDescriptionFor(numerator: 9, denominator: 3))
-//print(divisionDescriptionFor(numerator: 9, denominator: 3, withPunctuation: "!"))
-
-
-
-//var error = "The request failed:"
-//func appendErrorCode(_ code: Int, toErrorString errorString: inout String) {
-//    if code == 400 {
-//        errorString += " bad request."
-//    }
-//}
-//appendErrorCode(400, toErrorString: &error)
-//error
-
+func printPersonalGreetings(to names: String...) {
+    for name in names {
+        print("Hello \(name), welcome to the playground.")
+    }
+}
+printPersonalGreetings(to: "Alex","Chris","Drew","Pat")
 
 /*
+func divisionDescriptionFor(numerator: Double, denominator: Double, withPunctuation punctuation: String = ".") -> String {
+    return "\(numerator) divided by \(denominator) equals \(numerator / denominator)\(punctuation)"
+}
+print(divisionDescriptionFor(numerator: 9, denominator: 3))
+print(divisionDescriptionFor(numerator: 9, denominator: 3, withPunctuation: "!"))
+
+var error = "The request failed:"
+func appendErrorCode(_ code: Int, toErrorString errorString: inout String) {
+    if code == 400 {
+        errorString += " bad request."
+    }
+}
+appendErrorCode(400, toErrorString: &error)
+error
+
 func areaOfTriangleWith(base: Double, height: Double) -> Double {
     let numerator = base * height
     func divide() -> Double {
@@ -44,16 +33,7 @@ func areaOfTriangleWith(base: Double, height: Double) -> Double {
     return divide()
 }
 areaOfTriangleWith(base: 3.0, height: 5.0)
-*/
 
-func areaOfTriangleWith(base: Double, height: Double) -> Int {  //-> Double
-    let numerator = base * height
-    return Int(numerator / 2)
-}
-areaOfTriangleWith(base: 3.0, height: 5.0)
-
-
-/*
 func sortEvenOddNumbers(_ numbers: [Int]) -> (evens: [Int], odds: [Int]) {
     var evens = [Int]()
     var odds = [Int]()
