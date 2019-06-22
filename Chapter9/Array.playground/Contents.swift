@@ -3,6 +3,17 @@
 import Cocoa
 
 // Mutable arrays
+
+var mybag: Array = ["aaa","aaa","bbb","ccc"]
+mybag.contains("ccc")
+print(mybag)
+//Array<String>()
+//var bucketList_b = Array<String>()
+var bucketList_b: [String] = []
+//var bucketList_b = ["a00"]
+bucketList_b.append("ddddddd2")
+print(bucketList_b)
+
 var bucketList = ["000"]
 bucketList.append("111")
 bucketList.append("222")
