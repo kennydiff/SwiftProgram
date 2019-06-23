@@ -2,12 +2,16 @@
 
 import UIKit
 
-let volunteerCounts = [1,3,40,32,2,53,77,13]
+let volunteerCounts = [1,3,40,99,123,32,2,53,77,13]
 
-func sortAscending(_ i: Int, _ j: Int) -> Bool {
+//func sortAscending(_ i: Int, _ j: Int) -> Bool {
+//    return i < j  写成闭包
+//}
+let sortAscending = {(_ i: Int, _ j: Int) -> Bool in   //直接写成闭包模式
     return i < j
 }
-//let volunteersSorted = volunteerCounts.sorted(by: sortAscending)
+let volunteersSorted = volunteerCounts.sorted(by: sortAscending)
+//print(volunteerCounts.sorted(by: sortAscending))
 
 //let volunteersSorted = volunteerCounts.sorted(by: {
 //    (i: Int, j: Int) -> Bool in
@@ -15,8 +19,17 @@ func sortAscending(_ i: Int, _ j: Int) -> Bool {
 //})
 
 //let volunteersSorted = volunteerCounts.sorted(by: { i, j in i < j })
+//let volunteersSorted = volunteerCounts.sorted {$0 < $1}
+//print(volunteersSorted)
 
-let volunteersSorted = volunteerCounts.sorted { $0 < $1 }
+let count = [5, 10, -6, 75, 20]
+var descending = count.sorted{ return $0 > $1 }
+var ascending =  count.sorted{ n1, n2 in n1 < n2 }
+print(descending)
+print(ascending)
+
+
+
 
 //func makeTownGrand() -> (Int, Int) -> Int {
 //    func buildRoads(byAddingLights lights: Int, toExistingLights existingLights: Int) -> Int {
@@ -28,7 +41,6 @@ let volunteersSorted = volunteerCounts.sorted { $0 < $1 }
 //let townPlanByAddingLightsToExistingLights = makeTownGrand()
 //stoplights = townPlanByAddingLightsToExistingLights(4, stoplights)
 //print("Town has \(stoplights) stop lights.")
-
 func makeTownGrand(withBudget budget: Int, condition: (Int) -> Bool) -> ((Int, Int) -> Int)? {
     if condition(budget) {
         func buildRoads(byAddingLights lights: Int, toExistingLights existingLights: Int) -> Int {
