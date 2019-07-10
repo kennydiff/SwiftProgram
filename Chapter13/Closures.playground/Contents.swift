@@ -4,6 +4,10 @@ import UIKit
 
 let volunteerCounts = [1,3,40,99,123,32,2,53,77,13]
 
+
+volunteerCounts.sorted(by:<)
+volunteerCounts.sorted()  // == sorted(by:<)
+volunteerCounts.sorted(by:>)
 //func sortAscending(_ i: Int, _ j: Int) -> Bool {
 //    return i < j  写成闭包
 //}
@@ -127,12 +131,14 @@ let bigProjections = projectedPopulations.filter {  //filter 过滤 ，根据闭
 }
 bigProjections
 
-let  aaa = (accumulatedProjection2: Int, precinctProjection2: Int) -> Int in
-    return accumulatedProjection2 + precinctProjection2
-
 // reduce 理解为： 简约，减少（从数组的多个值，简约为1个值)
 let totalProjection = projectedPopulations.reduce(0) {  //这里0这个参数，以0为基础，再在额外的算法下进行简约计算。
-     aaa
+    (accumulatedProjection2: Int, precinctProjection2: Int) -> Int in
+    return accumulatedProjection2 + precinctProjection2
 }
 totalProjection
 
+
+//黄金挑战解答...
+//let totalProjection = projectedPopulations.reduce(0){$0 + $1}  //这里0这个参数，以0为基础，再在额外的算法下进行简约计算。
+//totalProjection
