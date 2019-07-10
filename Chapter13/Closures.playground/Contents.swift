@@ -105,29 +105,34 @@ currentPopulation = growBy(500)
 let anotherGrowBy = growBy  //引用指向同一个函数，变量也共用...
 anotherGrowBy(500)
 
-
 var bigCityPopulation = 4_061_981
 let bigCityGrowBy = makePopulationTracker(forInitialPopulation: bigCityPopulation)
 
 currentPopulation
 bigCityPopulation = bigCityGrowBy(10_000)
 
+
+// ----------------------------------------------
+
 let precinctPopulations = [1_244, 2_021, 2_157]
-let projectedPopulations = precinctPopulations.map {
+let projectedPopulations = precinctPopulations.map {  //map(_:)可以用来改变函数的内容
     (population: Int) -> Int in
     return population * 2
 }
 projectedPopulations
 
-let bigProjections = projectedPopulations.filter {
-    (projection: Int) -> Bool in
+let bigProjections = projectedPopulations.filter {  //filter 过滤 ，根据闭包函数的实现，大雨4000的保留
+    (projection: Int) -> Bool in  //projection 投射的意思...
     return projection > 4_000
 }
 bigProjections
 
-let totalProjection = projectedPopulations.reduce(0) {
-    (accumulatedProjection: Int, precinctProjection: Int) -> Int in
-    return accumulatedProjection + precinctProjection
+let  aaa = (accumulatedProjection2: Int, precinctProjection2: Int) -> Int in
+    return accumulatedProjection2 + precinctProjection2
+
+// reduce 理解为： 简约，减少（从数组的多个值，简约为1个值)
+let totalProjection = projectedPopulations.reduce(0) {  //这里0这个参数，以0为基础，再在额外的算法下进行简约计算。
+     aaa
 }
 totalProjection
 
