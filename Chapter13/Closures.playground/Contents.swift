@@ -8,9 +8,11 @@ let volunteerCounts = [1,3,40,99,123,32,2,53,77,13]
 volunteerCounts.sorted(by:<)
 volunteerCounts.sorted()  // == sorted(by:<)
 volunteerCounts.sorted(by:>)
+
 //func sortAscending(_ i: Int, _ j: Int) -> Bool {
-//    return i < j  写成闭包
+//    return i < j  //写成闭包
 //}
+
 /*
 let sortAscending = {(_ i: Int, _ j: Int) -> Bool in   //直接写成闭包模式
     return i < j
