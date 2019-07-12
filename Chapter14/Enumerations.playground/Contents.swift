@@ -8,6 +8,7 @@ enum TextAlignment : Int {
 }
 
 var alignment = TextAlignment.justify
+// alignment = .center
 
 print("Left has raw value \(TextAlignment.left.rawValue)")
 print("Right has raw value \(TextAlignment.right.rawValue)")
@@ -15,6 +16,7 @@ print("Center has raw value \(TextAlignment.center.rawValue)")
 print("Justify has raw value \(TextAlignment.justify.rawValue)")
 print("alignment has raw value \(alignment.rawValue)")
 
+/*
 // Create a raw value
 let myRawValue = 100
 
@@ -139,3 +141,4 @@ let fredAncestors = FamilyTree.twoKnownParents(
         ancestors: .noKnownParents),
     motherName: "Marsha",
     motherAncestors: .noKnownParents)
+*/
