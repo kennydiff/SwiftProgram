@@ -1,10 +1,19 @@
 // Playground - noun: a place where people can play
 
+//enum TextAlignment : Int {
+//    case left    = 20
+//    case right   = 30
+//    case center  = 40
+//    case justify = 50
+//    case ddd
+//}
+/*
 enum TextAlignment : Int {
-    case left    = 20
-    case right   = 30
-    case center  = 40
-    case justify = 50
+    case left
+    case right
+    case center
+    case justify
+    case ddd
 }
 
 var alignment = TextAlignment.justify
@@ -15,13 +24,15 @@ print("Right has raw value \(TextAlignment.right.rawValue)")
 print("Center has raw value \(TextAlignment.center.rawValue)")
 print("Justify has raw value \(TextAlignment.justify.rawValue)")
 print("alignment has raw value \(alignment.rawValue)")
+print("alignment has raw value \(TextAlignment.ddd.rawValue)")
 
 /*
 // Create a raw value
-let myRawValue = 100
+let myRawValue = 3
 
 // Try to convert the raw value into a TextAlignment
-if let myAlignment = TextAlignment(rawValue: myRawValue) {
+// if let myAlignment = TextAlignment(rawValue: myRawValue) {
+if TextAlignment(rawValue: myRawValue) != nil {
     // Conversion succeeded!
     print("successfully convered \(myRawValue) into a TextAlignment")
 } else {
@@ -30,18 +41,25 @@ if let myAlignment = TextAlignment(rawValue: myRawValue) {
 }
 
 switch alignment {
-case .left:
+case TextAlignment.left:
     print("left aligned")
 
-case .right:
+case TextAlignment.right:
     print("right aligned")
 
-case .center:
+case TextAlignment.center:
     print("center aligned")
 
-case .justify:
+case TextAlignment.justify:
     print("justified")
+    
+case .ddd:
+    print("ddd")
 }
+
+
+
+
 
 // ---------------------------------------------------------------------------
 
@@ -57,6 +75,7 @@ let myFavoriteLanguage = ProgrammingLanguage.swift
 print("My favorite programming language is \(myFavoriteLanguage.rawValue)")
 
 // ---------------------------------------------------------------------------
+
 
 enum LightBulb {
     case on
@@ -84,14 +103,17 @@ enum LightBulb {
 }
 
 var bulb = LightBulb.on
-let ambientTemperature = 77.0
+let ambientTemperature = 50.0
 
 var bulbTemperature = bulb.surfaceTemperature(forAmbientTemperature: ambientTemperature)
 print("the bulb's temperature is \(bulbTemperature)")
 
+
+
 bulb.toggle()
 bulbTemperature = bulb.surfaceTemperature(forAmbientTemperature: ambientTemperature)
 print("the bulb's temperature is \(bulbTemperature)")
+
 
 // ---------------------------------------------------------------------------
 
@@ -99,10 +121,10 @@ enum ShapeDimensions {
     // point has no associated value - it is dimensionless
     case point
 
-    // square's associated value is the length of one side
+    // square's 正方形 associated value is the length of one side
     case square(side: Double)
 
-    // rectangle's associated value defines its width and height
+    // rectangle's 长方形 associated value defines its width and height
     case rectangle(width: Double, height: Double)
 
     func area() -> Double {
@@ -127,6 +149,17 @@ var pointShape = ShapeDimensions.point
 print("square's area = \(squareShape.area())")
 print("rectangle's area = \(rectShape.area())")
 print("point's area = \(pointShape.area())")
+
+*/
+
+
+/*
+ enum FamilyTree {
+ case noKnownParents
+ case oneKnownParent(name: String, ancestors: FamilyTree)
+ case twoKnownParents(fatherName: String, fatherAncestors: FamilyTree,
+ motherName: String, motherAncestors: FamilyTree)
+ }*/
 
 enum FamilyTree {
     case noKnownParents
