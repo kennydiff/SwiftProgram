@@ -26,7 +26,7 @@ print("Justify has raw value \(TextAlignment.justify.rawValue)")
 print("alignment has raw value \(alignment.rawValue)")
 print("alignment has raw value \(TextAlignment.ddd.rawValue)")
 
-/*
+
 // Create a raw value
 let myRawValue = 3
 
@@ -113,7 +113,7 @@ print("the bulb's temperature is \(bulbTemperature)")
 bulb.toggle()
 bulbTemperature = bulb.surfaceTemperature(forAmbientTemperature: ambientTemperature)
 print("the bulb's temperature is \(bulbTemperature)")
-
+*/
 
 // ---------------------------------------------------------------------------
 
@@ -126,6 +126,9 @@ enum ShapeDimensions {
 
     // rectangle's 长方形 associated value defines its width and height
     case rectangle(width: Double, height: Double)
+    
+    // 直角三角形
+    case zhijiao3(width: Double, height: Double)
 
     func area() -> Double {
         switch self {
@@ -138,20 +141,45 @@ enum ShapeDimensions {
 
         case let .rectangle(width: w, height: h):
             return w * h
+            
+        case let .zhijiao3(width: w, height: h):
+            return w*h/2
+            
         }
     }
+    
+    func perimeter() -> Double {
+        switch self {
+        case .point:
+            return 0
+            
+        case let .square(side: side):
+            return side * 4
+            
+        case let .rectangle(width: w, height: h):
+            return 2*w + 2*h
+            
+        // 直角三角形的周长
+        case let .zhijiao3(width: w, height: h):
+            return w + h + (w*w + h*h).squareRoot()
+            
+        }
+    }
+    
 }
 
 var squareShape = ShapeDimensions.square(side: 10.0)
 var rectShape = ShapeDimensions.rectangle(width: 5.0, height: 10.0)
 var pointShape = ShapeDimensions.point
+var zhijiao3Shape = ShapeDimensions.zhijiao3(width: 7.0, height: 3.0)
 
-print("square's area = \(squareShape.area())")
-print("rectangle's area = \(rectShape.area())")
-print("point's area = \(pointShape.area())")
+print("square's area = \(squareShape.perimeter())")
+print("rectangle's area = \(rectShape.perimeter())")
+print("point's area = \(pointShape.perimeter())")
+print("zhijiao3's area = \(zhijiao3Shape.perimeter())")
 
-*/
-
+let x = 4.0
+let y = x.squareRoot()
 
 /*
  enum FamilyTree {
@@ -159,8 +187,9 @@ print("point's area = \(pointShape.area())")
  case oneKnownParent(name: String, ancestors: FamilyTree)
  case twoKnownParents(fatherName: String, fatherAncestors: FamilyTree,
  motherName: String, motherAncestors: FamilyTree)
- }*/
-
+ }
+ 
+ 
 enum FamilyTree {
     case noKnownParents
     indirect case oneKnownParent(name: String, ancestors: FamilyTree)
@@ -173,5 +202,4 @@ let fredAncestors = FamilyTree.twoKnownParents(
     fatherAncestors: .oneKnownParent(name: "Matilta",
         ancestors: .noKnownParents),
     motherName: "Marsha",
-    motherAncestors: .noKnownParents)
-*/
+    motherAncestors: .noKnownParents) */
