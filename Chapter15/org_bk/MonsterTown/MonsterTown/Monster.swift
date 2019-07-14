@@ -2,15 +2,14 @@
 //  Monster.swift
 //  MonsterTown
 //
-//  Created by Kenny on 2019/7/14.
-//  Copyright © 2019 yysm. All rights reserved.
+//  Created by Matthew D. Mathias on 8/28/14.
+//  Copyright (c) 2014 BigNerdRanch. All rights reserved.
 //
-
-import Foundation
 
 class Monster {
     var town: Town?
     var name = "Monster"
+    
     func terrorizeTown() {
         if town != nil {
             print("\(name) is terrorizing a town!")

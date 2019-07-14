@@ -3,18 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C005F0119AFE014002C41BA /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C005F0019AFE014002C41BA /* Monster.swift */; };
-		1C005F0319AFE928002C41BA /* Zombie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C005F0219AFE928002C41BA /* Zombie.swift */; };
-		1C46633919A7E39700FF9FD5 /* Town.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C46633819A7E39700FF9FD5 /* Town.swift */; };
-		1C809E6A19A79CD200191E74 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C809E6919A79CD200191E74 /* main.swift */; };
+		B99145A322DB28BD00750A7F /* Town.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99145A222DB28BD00750A7F /* Town.swift */; };
+		B99145A522DB2B4900750A7F /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99145A422DB2B4900750A7F /* Monster.swift */; };
+		B99145A722DB2BBF00750A7F /* Zombie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99145A622DB2BBF00750A7F /* Zombie.swift */; };
+		B99145A922DB34AC00750A7F /* Vampire.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99145A822DB34AC00750A7F /* Vampire.swift */; };
+		B991A6B622DA182200DE31A9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B991A6B522DA182200DE31A9 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		1C809E6419A79CD200191E74 /* CopyFiles */ = {
+		B991A6B022DA182200DE31A9 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -26,15 +27,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1C005F0019AFE014002C41BA /* Monster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
-		1C005F0219AFE928002C41BA /* Zombie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Zombie.swift; sourceTree = "<group>"; };
-		1C46633819A7E39700FF9FD5 /* Town.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Town.swift; sourceTree = "<group>"; };
-		1C809E6619A79CD200191E74 /* MonsterTown */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MonsterTown; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C809E6919A79CD200191E74 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B99145A222DB28BD00750A7F /* Town.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Town.swift; sourceTree = "<group>"; };
+		B99145A422DB2B4900750A7F /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
+		B99145A622DB2BBF00750A7F /* Zombie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zombie.swift; sourceTree = "<group>"; };
+		B99145A822DB34AC00750A7F /* Vampire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vampire.swift; sourceTree = "<group>"; };
+		B991A6B222DA182200DE31A9 /* MonsterTown */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MonsterTown; sourceTree = BUILT_PRODUCTS_DIR; };
+		B991A6B522DA182200DE31A9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1C809E6319A79CD200191E74 /* Frameworks */ = {
+		B991A6AF22DA182200DE31A9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -44,29 +46,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1C809E5D19A79CD200191E74 = {
+		B991A6A922DA182200DE31A9 = {
 			isa = PBXGroup;
 			children = (
-				1C809E6819A79CD200191E74 /* MonsterTown */,
-				1C809E6719A79CD200191E74 /* Products */,
+				B991A6B422DA182200DE31A9 /* MonsterTown */,
+				B991A6B322DA182200DE31A9 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		1C809E6719A79CD200191E74 /* Products */ = {
+		B991A6B322DA182200DE31A9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1C809E6619A79CD200191E74 /* MonsterTown */,
+				B991A6B222DA182200DE31A9 /* MonsterTown */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1C809E6819A79CD200191E74 /* MonsterTown */ = {
+		B991A6B422DA182200DE31A9 /* MonsterTown */ = {
 			isa = PBXGroup;
 			children = (
-				1C809E6919A79CD200191E74 /* main.swift */,
-				1C46633819A7E39700FF9FD5 /* Town.swift */,
-				1C005F0019AFE014002C41BA /* Monster.swift */,
-				1C005F0219AFE928002C41BA /* Zombie.swift */,
+				B991A6B522DA182200DE31A9 /* main.swift */,
+				B99145A822DB34AC00750A7F /* Vampire.swift */,
+				B99145A622DB2BBF00750A7F /* Zombie.swift */,
+				B99145A222DB28BD00750A7F /* Town.swift */,
+				B99145A422DB2B4900750A7F /* Monster.swift */,
 			);
 			path = MonsterTown;
 			sourceTree = "<group>";
@@ -74,13 +77,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1C809E6519A79CD200191E74 /* MonsterTown */ = {
+		B991A6B122DA182200DE31A9 /* MonsterTown */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1C809E6D19A79CD200191E74 /* Build configuration list for PBXNativeTarget "MonsterTown" */;
+			buildConfigurationList = B991A6B922DA182200DE31A9 /* Build configuration list for PBXNativeTarget "MonsterTown" */;
 			buildPhases = (
-				1C809E6219A79CD200191E74 /* Sources */,
-				1C809E6319A79CD200191E74 /* Frameworks */,
-				1C809E6419A79CD200191E74 /* CopyFiles */,
+				B991A6AE22DA182200DE31A9 /* Sources */,
+				B991A6AF22DA182200DE31A9 /* Frameworks */,
+				B991A6B022DA182200DE31A9 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -88,78 +91,95 @@
 			);
 			name = MonsterTown;
 			productName = MonsterTown;
-			productReference = 1C809E6619A79CD200191E74 /* MonsterTown */;
+			productReference = B991A6B222DA182200DE31A9 /* MonsterTown */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1C809E5E19A79CD200191E74 /* Project object */ = {
+		B991A6AA22DA182200DE31A9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0800;
-				ORGANIZATIONNAME = BigNerdRanch;
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = yysm;
 				TargetAttributes = {
-					1C809E6519A79CD200191E74 = {
-						CreatedOnToolsVersion = 6.0;
-						LastSwiftMigration = 0800;
+					B991A6B122DA182200DE31A9 = {
+						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
 			};
-			buildConfigurationList = 1C809E6119A79CD200191E74 /* Build configuration list for PBXProject "MonsterTown" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			buildConfigurationList = B991A6AD22DA182200DE31A9 /* Build configuration list for PBXProject "MonsterTown" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 1C809E5D19A79CD200191E74;
-			productRefGroup = 1C809E6719A79CD200191E74 /* Products */;
+			mainGroup = B991A6A922DA182200DE31A9;
+			productRefGroup = B991A6B322DA182200DE31A9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1C809E6519A79CD200191E74 /* MonsterTown */,
+				B991A6B122DA182200DE31A9 /* MonsterTown */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1C809E6219A79CD200191E74 /* Sources */ = {
+		B991A6AE22DA182200DE31A9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C809E6A19A79CD200191E74 /* main.swift in Sources */,
-				1C005F0319AFE928002C41BA /* Zombie.swift in Sources */,
-				1C005F0119AFE014002C41BA /* Monster.swift in Sources */,
-				1C46633919A7E39700FF9FD5 /* Town.swift in Sources */,
+				B991A6B622DA182200DE31A9 /* main.swift in Sources */,
+				B99145A722DB2BBF00750A7F /* Zombie.swift in Sources */,
+				B99145A522DB2B4900750A7F /* Monster.swift in Sources */,
+				B99145A922DB34AC00750A7F /* Vampire.swift in Sources */,
+				B99145A322DB28BD00750A7F /* Town.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		1C809E6B19A79CD200191E74 /* Debug */ = {
+		B991A6B722DA182200DE31A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -167,43 +187,60 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		1C809E6C19A79CD200191E74 /* Release */ = {
+		B991A6B822DA182200DE31A9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -211,51 +248,55 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
-		1C809E6E19A79CD200191E74 /* Debug */ = {
+		B991A6BA22DA182200DE31A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		1C809E6F19A79CD200191E74 /* Release */ = {
+		B991A6BB22DA182200DE31A9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1C809E6119A79CD200191E74 /* Build configuration list for PBXProject "MonsterTown" */ = {
+		B991A6AD22DA182200DE31A9 /* Build configuration list for PBXProject "MonsterTown" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1C809E6B19A79CD200191E74 /* Debug */,
-				1C809E6C19A79CD200191E74 /* Release */,
+				B991A6B722DA182200DE31A9 /* Debug */,
+				B991A6B822DA182200DE31A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1C809E6D19A79CD200191E74 /* Build configuration list for PBXNativeTarget "MonsterTown" */ = {
+		B991A6B922DA182200DE31A9 /* Build configuration list for PBXNativeTarget "MonsterTown" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1C809E6E19A79CD200191E74 /* Debug */,
-				1C809E6F19A79CD200191E74 /* Release */,
+				B991A6BA22DA182200DE31A9 /* Debug */,
+				B991A6BB22DA182200DE31A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 1C809E5E19A79CD200191E74 /* Project object */;
+	rootObject = B991A6AA22DA182200DE31A9 /* Project object */;
 }

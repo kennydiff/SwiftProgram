@@ -171,15 +171,13 @@ enum ShapeDimensions {
 var squareShape = ShapeDimensions.square(side: 10.0)
 var rectShape = ShapeDimensions.rectangle(width: 5.0, height: 10.0)
 var pointShape = ShapeDimensions.point
-var zhijiao3Shape = ShapeDimensions.zhijiao3(width: 7.0, height: 3.0)
+var zhijiao3Shape = ShapeDimensions.zhijiao3(width: 8.0, height: 4.0)
 
-print("square's area = \(squareShape.perimeter())")
-print("rectangle's area = \(rectShape.perimeter())")
-print("point's area = \(pointShape.perimeter())")
-print("zhijiao3's area = \(zhijiao3Shape.perimeter())")
+print("square's perimeter = \(squareShape.perimeter())")
+print("rectangle's perimeter = \(rectShape.perimeter())")
+print("point's perimeter = \(pointShape.perimeter())")
+print("zhijiao3's perimeter = \(zhijiao3Shape.perimeter())")
 
-let x = 4.0
-let y = x.squareRoot()
 
 /*
  enum FamilyTree {
