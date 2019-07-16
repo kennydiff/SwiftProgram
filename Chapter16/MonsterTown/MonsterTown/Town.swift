@@ -9,8 +9,8 @@
 struct Town {
     static let region = "South"
     var population = 5_422 {
-        didSet(oldPopulation) {
-            print("The population has changed to \(population) from \(oldPopulation).")
+        didSet(oldValue2){
+            print("The population has changed to \(population) from \(oldValue2).")
         }
     }
     var numberOfStoplights = 4
@@ -43,4 +43,6 @@ struct Town {
     mutating func changePopulation(by amount: Int) {
         population += amount
     }
+    
+    
 }
