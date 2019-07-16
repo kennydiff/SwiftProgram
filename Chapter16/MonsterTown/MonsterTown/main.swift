@@ -8,6 +8,8 @@
 
 var myTown = Town()
 
+//myTown.region = "North"
+
 let myTownSize = myTown.townSize
 print(myTownSize)
 
