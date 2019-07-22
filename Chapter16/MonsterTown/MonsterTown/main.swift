@@ -19,6 +19,8 @@ print("Size: \(myTown.townSize); population: \(myTown.population)")
 let fredTheZombie = Zombie()
 fredTheZombie.town = myTown
 fredTheZombie.terrorizeTown()
+fredTheZombie.terrorizeTown()
+fredTheZombie.terrorizeTown()
 fredTheZombie.town?.printDescription()
 
 print("Victim pool: \(fredTheZombie.victimPool)")

@@ -11,9 +11,16 @@ struct Town {
     var population = 5_422 {
         didSet(oldValue2){
             print("The population has changed to \(population) from \(oldValue2).")
+            
+            if (population < oldValue2){
+                aMayor.MayorAnnouce()
+            }
         }
     }
     var numberOfStoplights = 4
+    
+    var aMayor = Mayor()
+    
     
     enum Size {
         case small
