@@ -7,6 +7,7 @@
 //
 
 class Monster {
+    static let isTeerrifying = true
     class var spookyNoise: String {
         return "Grrr"
     }

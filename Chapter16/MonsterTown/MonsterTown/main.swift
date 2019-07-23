@@ -11,10 +11,11 @@ var myTown = Town()
 //myTown.region = "North"
 
 let myTownSize = myTown.townSize
-print(myTownSize)
+//print(myTownSize)
 
-myTown.changePopulation(by: 1_000_000)
-print("Size: \(myTown.townSize); population: \(myTown.population)")
+//myTown.changePopulation(by: 1_000_000)
+//myTown.changePopulation(by: -1)
+//print("Size: \(myTown.townSize); population: \(myTown.population)")
 
 let fredTheZombie = Zombie()
 fredTheZombie.town = myTown

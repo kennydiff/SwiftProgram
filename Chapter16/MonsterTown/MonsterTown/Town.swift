@@ -7,12 +7,25 @@
 //
 
 struct Town {
-    static let region = "South"
-    var population = 5_422 {
-        didSet(oldValue2){
-            print("The population has changed to \(population) from \(oldValue2).")
+    struct Mayor{
+        public public(set) var anietyLevel: Int = 0
+        func printInfo(){
+            print("I'm deeply saddened to hear about this latest tragedy. I promise that my office is looking into the nature of this rash of violence.struct")
         }
     }
+    static let region = "South"
+    let oneMayor = Mayor.init()
+    var population = 0 {
+        didSet(oldValue2){
+            if population < oldValue2 {
+                print("The population has changed to \(population) from \(oldValue2).")
+                oneMayor.printInfo()
+                oneMayor.anietyLevel = oneMayor.anietyLevel + 1
+                
+            }
+        }
+    }
+    
     var numberOfStoplights = 4
     
     enum Size {
