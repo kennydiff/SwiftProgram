@@ -17,16 +17,17 @@ struct Town {
     let oneMayor = Mayor.init()
     var population = 0 {
         didSet(oldValue2){
-            if population < oldValue2 {
                 print("The population has changed to \(population) from \(oldValue2).")
-                oneMayor.printInfo()
-                oneMayor.anietyLevel = oneMayor.anietyLevel + 1
-                
+                if (population < oldValue2){
+                    aMayor.MayorAnnouce()
             }
         }
     }
     
     var numberOfStoplights = 4
+    
+    var aMayor = Mayor()
+    
     
     enum Size {
         case small
@@ -56,6 +57,4 @@ struct Town {
     mutating func changePopulation(by amount: Int) {
         population += amount
     }
-    
-    
 }
