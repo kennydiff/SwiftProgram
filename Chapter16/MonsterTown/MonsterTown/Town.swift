@@ -7,12 +7,6 @@
 //
 
 struct Town {
-    struct Mayor{
-        public public(set) var anietyLevel: Int = 0
-        func printInfo(){
-            print("I'm deeply saddened to hear about this latest tragedy. I promise that my office is looking into the nature of this rash of violence.struct")
-        }
-    }
     static let region = "South"
     let oneMayor = Mayor.init()
     var population = 0 {
