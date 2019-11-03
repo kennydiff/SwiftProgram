@@ -17,7 +17,10 @@ class Monster {
     //var name = "Monster"
     var name: String
     
-    init(town: Town?, monsterName: String) {
+    required init?(town: Town?, monsterName: String) {
+        guard monsterName != "" else{
+            return nil
+        }
         self.town = town
         name = monsterName
     }

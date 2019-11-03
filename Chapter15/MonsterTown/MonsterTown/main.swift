@@ -25,7 +25,6 @@ var myTown = Town()
 //fredTheZombie.terrorizeTown()
 //fredTheZombie.town?.printDescription()  //??? 尴尬,,,有缺陷,,,僵尸无法杀死人? 知道缺陷，并修复.
 
-
 let fredVampire = Vampire()
 fredVampire.town = myTown
 fredVampire.town?.printDescription()
@@ -33,7 +32,6 @@ print(vampire_thrall)
 fredVampire.terrorizeTown()
 fredVampire.town?.printDescription()
 print(vampire_thrall)
-
 
 let fredVampire2 = Vampire()
 fredVampire2.town = myTown

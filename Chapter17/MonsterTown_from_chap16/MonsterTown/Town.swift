@@ -7,7 +7,7 @@
 //
 
 struct Town {
-    static let region = "South"
+    let region: String
     let oneMayor = Mayor.init()
     var population = 0 {
         didSet(oldValue2){
@@ -19,6 +19,21 @@ struct Town {
     }
     
     var numberOfStoplights = 4
+    
+    init?(region: String, population: Int, stoplights: Int){
+        guard population > 0 else{
+            return nil
+        }
+        self.region = region
+        self.population = population
+        numberOfStoplights = stoplights
+    }
+    
+    init?(population: Int, stoplights: Int){
+        self.init(region: "N/A", population: population, stoplights: stoplights)
+    }
+    
+    
     
     var aMayor = Mayor()
     

@@ -3,6 +3,7 @@
 import Cocoa
 
 fileprivate class IntArrayBuffer {
+//fileprivate struct IntArrayBuffer {
     var storage: [Int]
     
     init() {

@@ -6,30 +6,30 @@
 //  Copyright (c) 2014 BigNerdRanch. All rights reserved.
 //
 
-var myTown = Town()
+var myTown = Town(population: 10_000, stoplights: 6)
 
 //myTown.region = "North"
 
-let myTownSize = myTown.townSize
+let myTownSize = myTown?.townSize
 //print(myTownSize)
 
 //myTown.changePopulation(by: 1_000_000)
 //myTown.changePopulation(by: -1)
 //print("Size: \(myTown.townSize); population: \(myTown.population)")
 
-let fredTheZombie = Zombie(town: myTown, monsterName: "Fred")
+//let fredTheZombie = Zombie(limp: false,fallingApart: false, town: myTown, monsterName: "Fred")
+var fredTheZombie: Zombie? = Zombie(limp: false, fallingApart: false)
 
 //fredTheZombie.town = myTown
-fredTheZombie.terrorizeTown()
-fredTheZombie.terrorizeTown()
-fredTheZombie.terrorizeTown()
-fredTheZombie.town?.printDescription()
+fredTheZombie?.terrorizeTown()
+fredTheZombie?.town?.printDescription()
 
-print("Victim pool: \(fredTheZombie.victimPool)")
-fredTheZombie.victimPool = 500
-print("Victim pool: \(fredTheZombie.victimPool)")
+print("Victim pool: \(fredTheZombie?.victimPool ?? 0)")
+fredTheZombie?.victimPool = 500
+print("Victim pool: \(fredTheZombie?.victimPool ?? 0)")
 
 print(Zombie.spookyNoise)
 if Zombie.isTerrifying {
     print("Run away!")
 }
+fredTheZombie = nil

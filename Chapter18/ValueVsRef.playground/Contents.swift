@@ -16,15 +16,17 @@ class GreekGod {
     }
 }
 
-let hecate = GreekGod(name: "Hecate")
+let hecate = GreekGod(name: "Hecate")    //赫卡特女神
 let anotherHecate = hecate
 anotherHecate.name = "AnotherHecate"
 
 anotherHecate.name
 hecate.name
 
+
+
 // Section: Constant Value and Reference Types
-struct Pantheon {
+struct Pantheon {    //万神殿
     var chiefGod: GreekGod
     let dateCreated = NSDate() // add this in section on using Val & Ref types together
 }
@@ -36,7 +38,8 @@ zeus.name
 
 // Section: Using Reference and Value Types Together
 pantheon.chiefGod.name
-let greekPantheon = pantheon
+pantheon.dateCreated
+let greekPantheon = pantheon   //希腊万神殿
 
 hecate.name = "Trivia" // The Romans are taking over and changing things
 greekPantheon.chiefGod.name // ???
@@ -50,3 +53,5 @@ let godsCopy = gods
 gods.last?.name = "Jupiter"
 gods
 godsCopy
+
+athena === hecate

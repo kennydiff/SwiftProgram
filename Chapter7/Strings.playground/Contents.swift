@@ -51,3 +51,4 @@ let end = empty.endIndex
 //let b = (empty.isEmpty)
 //// Hello's Unicode16 's value to a instent.
 //let c = "\u{0061}\u{0301}"
+
