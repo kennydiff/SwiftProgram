@@ -1,13 +1,19 @@
 protocol TabularDataSource {
     var numberOfRows: Int { get }
     var numberOfColumns: Int { get }
+    // var description: String {get}  //Kenny Added for 垃圾CustomStringConvertibles，删掉这玩意就得将description 加入协议
 
     func label(forColumn column: Int) -> String
 
     func itemFor(row: Int, column: Int) -> String
 }
 
-func printTable(_ dataSource: TabularDataSource & CustomStringConvertible) {
+protocol printableTablularDataSource: TabularDataSource,CustomStringConvertible{
+    
+}
+
+func printTable(_ dataSource: printableTablularDataSource) {
+//func printTable(_ dataSource: TabularDataSource) {
     print("Table: \(dataSource.description)")
 
     // Create first row containing column headers
@@ -20,9 +26,8 @@ func printTable(_ dataSource: TabularDataSource & CustomStringConvertible) {
         let columnLabel = dataSource.label(forColumn: i)
         let columnHeader = " \(columnLabel) |"
         firstRow += columnHeader
-        columnWidths.append(columnLabel.characters.count)
+        columnWidths.append(columnLabel.count)
     }
-
     print(firstRow)
 
     for i in 0 ..< dataSource.numberOfRows {
@@ -32,7 +37,7 @@ func printTable(_ dataSource: TabularDataSource & CustomStringConvertible) {
         // Append each item in this row to our string
         for j in 0 ..< dataSource.numberOfColumns {
             let item = dataSource.itemFor(row: i, column: j)
-            let paddingNeeded = columnWidths[j] - item.characters.count
+            let paddingNeeded = columnWidths[j] - item.count
             let padding = repeatElement(" ", count: paddingNeeded).joined(separator: "")
             out += " \(padding)\(item) |"
         }
@@ -42,13 +47,15 @@ func printTable(_ dataSource: TabularDataSource & CustomStringConvertible) {
     }
 }
 
+
 struct Person {
     let name: String
     let age: Int
     let yearsOfExperience: Int
 }
 
-struct Department: TabularDataSource, CustomStringConvertible {
+struct Department: printableTablularDataSource{
+//struct Department: TabularDataSource {
     let name: String
     var people = [Person]()
 
@@ -93,7 +100,8 @@ struct Department: TabularDataSource, CustomStringConvertible {
 }
 
 var department = Department(name: "Engineering")
-department.add(Person(name: "Joe", age: 30, yearsOfExperience: 6))
+//department.add(Person(name: "Joe", age: 30, yearsOfExperience: 6))
+department.add(Person(name: "Joe", age: 999, yearsOfExperience: 6))
 department.add(Person(name: "Karen", age: 40, yearsOfExperience: 18))
 department.add(Person(name: "Fred", age: 50, yearsOfExperience: 20))
 
