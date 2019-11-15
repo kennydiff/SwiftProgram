@@ -12,11 +12,11 @@ class Lexer {
         case invalidCharacter(Character)
     }
 
-    let input: String.CharacterView
-    var position: String.CharacterView.Index
+    let input: String
+    var position: String.Index
 
     init(input: String) {
-        self.input = input.characters
+        self.input = input
         self.position = self.input.startIndex
     }
 
@@ -28,7 +28,7 @@ class Lexer {
     }
 
     func advance() {
-        assert(position < input.endIndex, "Cannot advance past endIndex!")
+        assert(position < input.endIndex, "Cannot advance past endIndex!")  //assertion: n. 断言，声明；主张，要求；坚持；认定
         position = input.index(after: position)
     }
 
@@ -52,7 +52,7 @@ class Lexer {
         return value
     }
 
-    func lex() throws -> [Token] {
+    func lex() -> [Token] {
         var tokens = [Token]()
 
         while let nextCharacter = peek() {
@@ -70,7 +70,7 @@ class Lexer {
                 advance()
 
             default:
-                throw Lexer.Error.invalidCharacter(nextCharacter)
+                throw Lexer.Error.invalidCharacter(nextCharacter) //抛出不合法字符的错误
             }
         }
 

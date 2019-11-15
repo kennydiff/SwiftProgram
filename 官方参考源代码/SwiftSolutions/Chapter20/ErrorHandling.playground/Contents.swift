@@ -12,11 +12,11 @@ class Lexer {
         case invalidCharacter(Character)
     }
 
-    let input: String.CharacterView
-    var position: String.CharacterView.Index
+    let input: String
+    var position: String.Index
 
     init(input: String) {
-        self.input = input.characters
+        self.input = input
         self.position = self.input.startIndex
     }
 
@@ -78,7 +78,9 @@ class Lexer {
     }
 }
 
-class Parser {
+//----------------------------------------------------------
+
+class Parser {   //Parser这个类
     enum Error: Swift.Error {
         case unexpectedEndOfInput
         case invalidToken(Token)
@@ -136,10 +138,11 @@ class Parser {
     }
 }
 
+
 func evaluate(_ input: String) {
     print("Evaluating: \(input)")
     let lexer = Lexer(input: input)
-
+    
     do {
         let tokens = try lexer.lex()
         print("Lexer output: \(tokens)")
@@ -158,4 +161,18 @@ func evaluate(_ input: String) {
     }
 }
 
+//evaluate("10 + 3 + 5")
+evaluate("10 + 3 + 46")
+
+/*
+func evaluate(_ input: String) {
+    print("Evaluating: \(input)")
+    let lexer = Lexer(input: input)
+    let tokens = lexer.lex()
+    print("Lexer output: \(tokens)")
+}
+
 evaluate("10 + 3 + 5")
+
+*/
+
