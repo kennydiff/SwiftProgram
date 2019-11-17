@@ -52,7 +52,7 @@ class Lexer {
         return value
     }
 
-    func lex() -> [Token] {
+    func lex() throws -> [Token] {
         var tokens = [Token]()
 
         while let nextCharacter = peek() {
@@ -70,6 +70,7 @@ class Lexer {
                 advance()
 
             default:
+//                return tokens
                 throw Lexer.Error.invalidCharacter(nextCharacter) //抛出不合法字符的错误
             }
         }
