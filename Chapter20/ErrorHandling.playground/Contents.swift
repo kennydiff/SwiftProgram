@@ -152,7 +152,6 @@ class Parser {
 func evaluate(_ input: String) {
     print("Evaluating: \(input)")
     let lexer = Lexer(input: input)
-        
     do {
         let tokens = try lexer.lex()
         print("Lexer output: \(tokens)")
@@ -160,7 +159,9 @@ func evaluate(_ input: String) {
         let result = try parser.parse()
         print("Parser output: \(result)")
     } catch Lexer.Error.invalidCharacter(let character) {
-        print("Input contained an invalid character: \(character)")
+        // let p = lexer.position.encodedOffset
+        let p = input.distance(from: input.startIndex, to: lexer.position)
+        print("Input contained an invalid character at index \(p): \(character)")
     } catch Parser.Error.unexpectedEndOfInput {
         print("Unexpected end of input during parsing")
     } catch Parser.Error.invalidToken(let token) {
@@ -170,4 +171,4 @@ func evaluate(_ input: String) {
     }
 }
 
-evaluate("10 + 5 + 7c + 8")
+evaluate("1 + 3b + 7 + 8")
