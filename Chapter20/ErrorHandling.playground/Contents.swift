@@ -170,4 +170,4 @@ func evaluate(_ input: String) {
     }
 }
 
-evaluate("10 + 5 + 7a + 8")
+evaluate("10 + 5 + 7b + 8")
