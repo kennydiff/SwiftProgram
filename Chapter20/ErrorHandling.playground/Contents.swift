@@ -29,7 +29,7 @@ class Lexer {
     }
 
     func advance() {
-assert(position < input.endIndex, "Cannot advance past endIndex!")  //assertion: n. 断言，声明；主张，要求；坚持；认定
+        assert(position < input.endIndex, "Cannot advance past endIndex!")  //assertion: n. 断言，声明；主张，要求；坚持；认定
         position = input.index(after: position)
     }
 
