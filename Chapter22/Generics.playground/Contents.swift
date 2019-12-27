@@ -71,7 +71,7 @@ func myMap<T,U>(_ items: [T], _ f: (T) -> (U)) -> [U] {
 }
 
 let strings = ["one", "two", "three"]
-let stringLengths = myMap(strings) { $0.characters.count }
+let stringLengths = myMap(strings) { $0.count }
 print(stringLengths) // Prints [3, 3, 5]
 
 func checkIfEqual<T: Equatable>(_ first: T, _ second: T) -> Bool {
@@ -115,3 +115,4 @@ myStack.pushAll(myOtherStack)
 for value in myStack {
     print("after pushing items onto stack, got \(value)")
 }
+
