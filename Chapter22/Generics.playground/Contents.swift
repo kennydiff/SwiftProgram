@@ -1,5 +1,42 @@
 //: Playground - noun: a place where people can play
 
+
+func swapTwoValues<T>(_ a: inout T, _ b: inout T) {
+    let temporaryA = a
+    a = b
+    b = temporaryA
+}
+
+var cc = "5"
+var dd = "6b"
+print(cc)
+print(dd)
+
+swapTwoValues(&cc, &dd)
+print(cc)
+print(dd)
+
+
+/*
+struct Stack1<Element> {
+        var items = [Element]()
+        mutating func push(_ newItem: Element) { items.append(newItem)
+        }
+    mutating func pop() -> Element? { guard !items.isEmpty else {
+        return nil
+  
+        }
+        return items.removeLast() }
+}
+
+var intStack2 = Stack1<String>()
+intStack2.push("1")
+intStack2.push("2b")
+print(intStack2.pop())
+print(intStack2.pop())
+print(intStack2.pop())
+*/
+
 struct StackIterator<T>: IteratorProtocol {
     var stack: Stack<T>
 
@@ -22,6 +59,8 @@ struct Stack<Element>: Sequence {
         return items.removeLast()
     }
 
+    
+    
     func map<U>(_ f: (Element) -> U) -> Stack<U> {
         var mappedItems = [U]()
         for item in items {
@@ -38,6 +77,12 @@ struct Stack<Element>: Sequence {
         for item in sequence {
             self.push(item)
         }
+    }
+}
+
+extension Stack {
+    var topItem: Element? {
+        return items.isEmpty ? nil : items[items.count - 1]
     }
 }
 
@@ -59,11 +104,28 @@ stringStack.push("another string")
 
 print(stringStack.pop()) // Prints Optional("another string")
 
+
+
+var stackOfStrings = Stack<String>()
+stackOfStrings.push("uno")
+stackOfStrings.push("dos")
+stackOfStrings.push("tres")
+stackOfStrings.push("cuatro")
+stackOfStrings.topItem
+
+let fromTheTopB = stackOfStrings.pop()
+print("---------------------------------------------------------------")
+print(stackOfStrings.items.count)
+
+
+
+
+
 let x: Optional<Int> = 3
 [1,2,3].map({ $0 })
 
-func myMap<T,U>(_ items: [T], _ f: (T) -> (U)) -> [U] {
-    var result = [U]()
+func myMap<T2,U1>(_ items: [T2], _ f: (T2) -> (U1)) -> [U1] {
+    var result = [U1]()
     for item in items {
         result.append(f(item))
     }
